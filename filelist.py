@@ -1,9 +1,14 @@
 import os
+import colorama
+from colorama import Fore, Back, Style
+
+
 str = input("Enter the path: ")
-results = os.listdir(str)
 
-# Reverse order of sort
-# sresults = sorted(results, reverse=True)
+for fname in os.listdir(str):
+    path = os.path.join(str,fname)
+    if os.path.isdir(path):
+        print (Fore.GREEN + path)
 
-for file in results:
-    print (file)
+    else:
+        print (Fore.WHITE + path)
