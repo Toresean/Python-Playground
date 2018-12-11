@@ -15,6 +15,6 @@ str = input("Enter the path: ")
 
 
 for root, dirs, files in (os.walk(str,topdown=False)):
-    print('Found directory: %s' % root)
+    print (Fore.GREEN + 'Directory: %s' % root)
     for fname in files:
-        print('\t%s' % fname)
+        print (Fore.WHITE +  '\t%s' % fname)
